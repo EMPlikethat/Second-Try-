@@ -46,31 +46,49 @@ header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px soli
 
 /* PROMO BAR */
 .promo{background:var(--blue);color:#fff;text-align:center;padding:11px 20px;font-size:.9rem;font-weight:500;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
-.promo strong{font-weight:800}
 .promo a{text-decoration:underline;font-weight:700;color:#fff}
 
-/* ============ TOP SECTION: OWNERS + QUOTE + REVIEWS ============ */
-.top-section{padding:60px 0 70px;background:linear-gradient(180deg,#F8FAFC 0%,#EFF4FF 100%)}
-.top-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:36px;align-items:start}
-@media(max-width:980px){.top-grid{grid-template-columns:1fr;gap:28px}}
+/* ============ TOP: TITLE LEFT / ABOUT RIGHT ============ */
+.top-hero{padding:60px 0 50px;background:linear-gradient(180deg,#F8FAFC 0%,#EFF4FF 100%)}
+.top-hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+@media(max-width:980px){.top-hero-grid{grid-template-columns:1fr;gap:32px}}
 
-/* LEFT COLUMN */
-.left-col{display:flex;flex-direction:column;gap:24px}
+.hero-title-col h1{font-size:clamp(2rem,4.4vw,3.1rem);font-weight:900;line-height:1.08;letter-spacing:-1.5px;color:var(--navy);margin-bottom:22px}
+.hero-title-col h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero-title-col .sub{color:var(--muted);font-size:1.05rem;line-height:1.7;margin-bottom:26px;max-width:520px}
+.hero-trust{display:flex;align-items:center;gap:14px;margin-bottom:28px;flex-wrap:wrap}
+.hero-trust .badge{width:40px;height:40px;border-radius:50%;background:#fff;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--blue);font-size:.78rem;box-shadow:0 4px 12px rgba(0,0,0,.06)}
+.hero-trust .rating{font-weight:700;font-size:.95rem;color:var(--navy)}
+.hero-trust .stars{color:#FBBF24;letter-spacing:2px}
+.hero-title-col .actions{display:flex;gap:14px;flex-wrap:wrap}
 
-/* About Owners card */
-.owners-card{background:#fff;border-radius:18px;padding:32px;box-shadow:var(--shadow);border:1px solid var(--border)}
-.owners-card .eyebrow{color:var(--purple);font-size:.72rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;display:block;margin-bottom:12px}
-.owners-card h2{color:var(--navy);font-size:clamp(1.4rem,2.6vw,1.9rem);font-weight:900;letter-spacing:-.7px;line-height:1.2;margin-bottom:18px}
-.owners-photo-row{display:flex;gap:20px;align-items:flex-start;margin-bottom:18px}
-.owners-photo{width:110px;height:110px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;color:#fff;font-size:2.4rem;flex-shrink:0;box-shadow:0 8px 24px rgba(124,58,237,.3)}
-.owners-names{flex:1}
-.owners-names h3{color:var(--navy);font-size:1.1rem;font-weight:800;margin-bottom:4px}
-.owners-names span{color:var(--muted);font-size:.85rem;display:block;margin-bottom:14px}
-.owners-card p{color:var(--muted);font-size:.94rem;line-height:1.7;margin-bottom:14px}
-.owners-signature{font-weight:800;color:var(--navy);font-size:.95rem;margin-top:6px;font-style:italic}
+/* About Us card (right) */
+.about-card{background:#fff;border-radius:20px;padding:30px;box-shadow:var(--shadow-lg);border:1px solid var(--border)}
+.about-card .eyebrow{color:var(--purple);font-size:.72rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;display:block;margin-bottom:10px}
+.about-card h2{color:var(--navy);font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:900;letter-spacing:-.6px;margin-bottom:20px}
+.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px}
+.photo-placeholder{aspect-ratio:1;border-radius:14px;background:linear-gradient(135deg,#DBEAFE 0%,#E9D5FF 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--blue-dark);font-weight:700;font-size:.85rem;gap:8px;border:2px dashed rgba(124,58,237,.35);overflow:hidden}
+.photo-placeholder img{width:100%;height:100%;object-fit:cover}
+.photo-placeholder .icon{font-size:1.8rem;opacity:.7}
+.photo-placeholder small{font-weight:500;opacity:.7;font-size:.72rem}
+.about-card p{color:var(--muted);font-size:.94rem;line-height:1.7;margin-bottom:14px}
+.about-signature{font-weight:800;color:var(--navy);font-size:.95rem;font-style:italic}
 
-/* Quote Box card */
-.quote-card{background:linear-gradient(160deg,#1E40AF 0%,#5B21B6 100%);border-radius:18px;padding:30px;box-shadow:0 20px 50px rgba(37,99,235,.25);color:#fff}
+/* ============ BANNER STRIP ============ */
+.trust-banner{background:var(--grad);color:#fff;padding:22px 0}
+.trust-banner-inner{display:flex;justify-content:center;align-items:center;gap:36px;flex-wrap:wrap;max-width:1240px;margin:0 auto;padding:0 24px}
+.trust-banner-item{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:1rem;letter-spacing:.3px;white-space:nowrap}
+.trust-banner-item .dot{width:8px;height:8px;background:#fff;border-radius:50%;flex-shrink:0;opacity:.9}
+@media(max-width:900px){.trust-banner-inner{gap:20px}.trust-banner-item{font-size:.9rem}}
+@media(max-width:560px){.trust-banner-inner{flex-direction:column;align-items:flex-start;gap:12px}}
+
+/* ============ QUOTE + REVIEWS ROW ============ */
+.quote-review-row{padding:70px 0;background:#fff}
+.qr-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+@media(max-width:980px){.qr-grid{grid-template-columns:1fr;gap:28px}}
+
+/* Quote card */
+.quote-card{background:linear-gradient(160deg,#1E40AF 0%,#5B21B6 100%);border-radius:18px;padding:32px;box-shadow:0 20px 50px rgba(37,99,235,.25);color:#fff}
 .quote-card h2{font-size:1.5rem;font-weight:900;text-align:center;margin-bottom:6px;letter-spacing:-.4px}
 .quote-card .sub{text-align:center;font-size:.85rem;opacity:.85;margin-bottom:20px}
 .quote-card input,.quote-card select,.quote-card textarea{width:100%;padding:13px 16px;border-radius:9px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.96);font-family:inherit;font-size:.9rem;margin-bottom:11px;color:var(--text);outline:none}
@@ -81,16 +99,14 @@ header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px soli
 .btn-submit{width:100%;padding:15px;background:#fff;color:var(--purple-dark);border:none;border-radius:10px;font-weight:900;font-size:1rem;cursor:pointer;font-family:inherit;transition:.2s}
 .btn-submit:hover{background:#F3F4F6;transform:translateY(-1px)}
 
-/* RIGHT COLUMN: Reviews list */
-.reviews-panel{background:#fff;border-radius:18px;padding:30px;box-shadow:var(--shadow);border:1px solid var(--border);position:sticky;top:100px}
-@media(max-width:980px){.reviews-panel{position:static}}
+/* Reviews panel */
+.reviews-panel{background:#fff;border-radius:18px;padding:32px;box-shadow:var(--shadow);border:1px solid var(--border)}
 .reviews-panel .eyebrow{color:var(--purple);font-size:.72rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;display:block;margin-bottom:10px}
-.reviews-panel h2{color:var(--navy);font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:900;letter-spacing:-.6px;margin-bottom:6px}
-.reviews-panel .rating-summary{display:flex;align-items:center;gap:10px;margin-bottom:22px;padding-bottom:20px;border-bottom:1px solid var(--border)}
-.rating-summary .big-num{font-size:2rem;font-weight:900;color:var(--navy);line-height:1}
+.reviews-panel h2{color:var(--navy);font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:900;letter-spacing:-.6px;margin-bottom:16px}
+.rating-summary{display:flex;align-items:center;gap:12px;margin-bottom:22px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.rating-summary .big-num{font-size:2.1rem;font-weight:900;color:var(--navy);line-height:1}
 .rating-summary .stars{color:#FBBF24;font-size:1.05rem;letter-spacing:2px}
 .rating-summary .count{color:var(--muted);font-size:.85rem;font-weight:600}
-
 .review-item{padding:18px 0;border-bottom:1px solid var(--border);display:flex;gap:14px;align-items:flex-start}
 .review-item:last-of-type{border-bottom:none;padding-bottom:0}
 .review-avatar{width:44px;height:44px;border-radius:50%;background:var(--blue-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;flex-shrink:0}
@@ -100,15 +116,11 @@ header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px soli
 .review-meta{display:flex;justify-content:space-between;align-items:center;font-size:.78rem}
 .review-meta .name{font-weight:700;color:var(--navy)}
 .review-meta .loc{color:var(--muted)}
-.reviews-footer{margin-top:20px;padding-top:20px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:10px}
+.reviews-footer{margin-top:22px;padding-top:20px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:10px}
 .reviews-footer .btn{width:100%}
 
-/* ============ REST OF PAGE (unchanged sections below) ============ */
-.hero-banner{position:relative;min-height:420px;background:linear-gradient(135deg,rgba(15,23,42,.82),rgba(37,99,235,.55)),url('https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1600&q=80') center/cover;display:flex;align-items:center;padding:70px 0;color:#fff;text-align:center}
-.hero-banner h2{font-size:clamp(2rem,4.2vw,3rem);font-weight:900;line-height:1.1;letter-spacing:-1.5px;max-width:820px;margin:0 auto 20px;text-shadow:0 4px 30px rgba(0,0,0,.3)}
-.hero-banner p{font-size:1.1rem;opacity:.95;max-width:640px;margin:0 auto 26px}
-
-.brands{background:#fff;padding:44px 0;text-align:center;border-bottom:1px solid var(--border)}
+/* ============ REST OF PAGE (unchanged) ============ */
+.brands{background:#fff;padding:44px 0;text-align:center;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .brands h3{color:var(--purple);font-size:1.05rem;font-weight:800;margin-bottom:22px}
 .brand-row{display:flex;justify-content:center;align-items:center;gap:48px;flex-wrap:wrap;opacity:.75}
 .brand-row span{font-weight:800;color:var(--navy-2);font-size:1.15rem;letter-spacing:-.3px}
@@ -134,8 +146,7 @@ header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px soli
 #gallery{background:linear-gradient(180deg,#1E3A8A 0%,#312E81 100%);padding:80px 0;position:relative;overflow:hidden}
 #gallery::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.07) 1.5px,transparent 1.5px);background-size:26px 26px}
 #gallery .container{position:relative;z-index:1}
-.gal-wrap{position:relative;max-width:1100px;margin:0 auto}
-.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1100px;margin:0 auto}
 @media(max-width:820px){.gal-grid{grid-template-columns:repeat(2,1fr)}}
 .gal-item{border-radius:12px;overflow:hidden;aspect-ratio:4/3;position:relative;background:#1E293B}
 .gal-item img{width:100%;height:100%;object-fit:cover}
@@ -211,7 +222,7 @@ footer .container{position:relative;z-index:1}
     </a>
     <nav class="nav">
       <a href="#services">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></a>
-      <a href="#owners">About <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></a>
+      <a href="#about">About <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></a>
       <a href="#footer">Contact Us</a>
       <a href="#areas">Service Area</a>
       <a href="#blog">Careers</a>
@@ -226,133 +237,148 @@ footer .container{position:relative;z-index:1}
   <span>➜</span>
 </div>
 
-<!-- ============ TOP SECTION ============ -->
-<section class="top-section">
-  <div class="container">
-    <div class="top-grid">
+<!-- ============ TOP HERO: TITLE LEFT / ABOUT RIGHT ============ -->
+<section class="top-hero">
+  <div class="container top-hero-grid">
 
-      <!-- LEFT COLUMN: Owners + Quote -->
-      <div class="left-col">
-
-        <!-- About the Owners -->
-        <div class="owners-card" id="owners">
-          <span class="eyebrow">Meet The Owners</span>
-          <h2>Hi, we're the Homies behind MyCleanHomie.</h2>
-          <div class="owners-photo-row">
-            <div class="owners-photo">👋</div>
-            <div class="owners-names">
-              <h3>Josh &amp; Kayla — Owners</h3>
-              <span>Camas, WA · Est. 2025</span>
-              <p style="margin-bottom:0">We're a husband-and-wife team who started MyCleanHomie because homeowners deserve a cleaning company that shows up on time, does the job right, and treats their property like their own.</p>
-            </div>
-          </div>
-          <p>Every job is done by a uniformed technician — licensed, bonded, and insured — and every crew member on your roof is harnessed and tied off for safety. We use EPA-approved treatments, satellite-measured estimates, and straightforward pricing.</p>
-          <p>No upsells. No surprises. Just clean homes and happy neighbors across Camas, Vancouver, Portland, and beyond.</p>
-          <div class="owners-signature">— Josh &amp; Kayla</div>
-        </div>
-
-        <!-- Quote Box -->
-        <div class="quote-card" id="quote">
-          <h2>Get A Free Quote</h2>
-          <p class="sub">It only takes 60 seconds.</p>
-          <form onsubmit="event.preventDefault();alert('Thanks! We\'ll be in touch within 1 business day.')">
-            <input type="text" placeholder="Full Name" required>
-            <input type="tel" placeholder="Phone" required>
-            <input type="email" placeholder="Email" required>
-            <input type="text" placeholder="Full Street Address" required>
-            <select required>
-              <option value="">Project Type — Select options…</option>
-              <option>Roof Soft Wash &amp; Moss Removal</option>
-              <option>1st Story Gutter Cleaning</option>
-              <option>2nd Story &amp; Over Gutter Cleaning</option>
-              <option>House Softwash (Siding)</option>
-              <option>Driveway &amp; Entry Cleaning</option>
-              <option>Cedar Fence Softwash</option>
-              <option>Deck / Porch Softwash</option>
-              <option>Retaining Walls</option>
-            </select>
-            <input type="text" placeholder="Project Description">
-            <label class="consent">
-              <input type="checkbox">
-              <span>I consent to receive transactional text messages from MyCleanHomie regarding my service request, including estimate follow-ups, appointment reminders, crew arrival updates, and invoice notifications. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out or HELP for help.</span>
-            </label>
-            <label class="consent">
-              <input type="checkbox">
-              <span>I consent to receive occasional marketing or promotional text messages from MyCleanHomie such as seasonal offers and new service updates. Msg &amp; data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase.</span>
-            </label>
-            <button type="submit" class="btn-submit">Submit</button>
-          </form>
-        </div>
-
+    <!-- LEFT: Big title -->
+    <div class="hero-title-col">
+      <h1>Reputable <span>Roof Soft Wash</span> &amp; Gutter Cleaning In Camas, WA</h1>
+      <p class="sub">Safe roof cleaning and protection for a longer-lasting roof. Trusted by homeowners across Washington &amp; Oregon since 2025.</p>
+      <div class="hero-trust">
+        <div class="badge">G</div><div class="badge">B</div><div class="badge">Y</div>
+        <span class="rating">400+ Reviews 4.9/5 <span class="stars">★★★★★</span></span>
       </div>
-
-      <!-- RIGHT COLUMN: Reviews List -->
-      <div class="reviews-panel">
-        <span class="eyebrow">Reviews</span>
-        <h2>What Your Neighbors Are Saying</h2>
-        <div class="rating-summary">
-          <span class="big-num">4.9</span>
-          <div>
-            <div class="stars">★★★★★</div>
-            <div class="count">Based on 400+ reviews</div>
-          </div>
-        </div>
-
-        <div class="review-item">
-          <div class="review-avatar">SC</div>
-          <div class="review-content">
-            <div class="review-stars">★★★★★</div>
-            <div class="review-text">"Extremely satisfied! The team was highly professional and easy to work with from the initial quote to the final touches."</div>
-            <div class="review-meta"><span class="name">Stella Chen</span><span class="loc">Camas, WA</span></div>
-          </div>
-        </div>
-
-        <div class="review-item">
-          <div class="review-avatar">SA</div>
-          <div class="review-content">
-            <div class="review-stars">★★★★★</div>
-            <div class="review-text">"Great experience from start to finish. Quote was quick, they listened to what I wanted, and had it back within a week."</div>
-            <div class="review-meta"><span class="name">Sara Ashback</span><span class="loc">Vancouver, WA</span></div>
-          </div>
-        </div>
-
-        <div class="review-item">
-          <div class="review-avatar">BW</div>
-          <div class="review-content">
-            <div class="review-stars">★★★★★</div>
-            <div class="review-text">"Five star service! Our home looks so much better now than before. The work they do is BEAUTIFUL."</div>
-            <div class="review-meta"><span class="name">Bev Wylie</span><span class="loc">Portland, OR</span></div>
-          </div>
-        </div>
-
-        <div class="review-item">
-          <div class="review-avatar">MR</div>
-          <div class="review-content">
-            <div class="review-stars">★★★★★</div>
-            <div class="review-text">"On time, clean, and professional. Left the driveway looking brand new — couldn't be happier."</div>
-            <div class="review-meta"><span class="name">Mike R.</span><span class="loc">Washougal, WA</span></div>
-          </div>
-        </div>
-
-        <div class="reviews-footer">
-          <a href="https://share.google/qzJfJp1kEehNLbCAw" target="_blank" class="btn btn-blue">⭐ Read All Reviews</a>
-          <a href="#quote" class="btn btn-ghost-dark">Get A Free Quote</a>
-        </div>
+      <div class="actions">
+        <a href="#quote" class="btn btn-purple btn-lg">Get A Free Quote</a>
+        <a href="tel:3608440794" class="btn btn-ghost-dark btn-lg">📞 (360) 844-0794</a>
       </div>
-
     </div>
+
+    <!-- RIGHT: About Us card -->
+    <div class="about-card" id="about">
+      <span class="eyebrow">About Us</span>
+      <h2>Meet The Homies Behind MyCleanHomie</h2>
+
+      <div class="photo-grid">
+        <div class="photo-placeholder">
+          <div class="icon">📷</div>
+          Photo 1
+          <small>Add owner photo</small>
+        </div>
+        <div class="photo-placeholder">
+          <div class="icon">📷</div>
+          Photo 2
+          <small>Add team photo</small>
+        </div>
+      </div>
+
+      <p>We're a husband-and-wife team who started MyCleanHomie because homeowners deserve a cleaning company that shows up on time, does the job right, and treats their property like their own.</p>
+      <p>Every job is done by a uniformed technician — licensed, bonded, and insured — and every crew member on your roof is harnessed and tied off for safety. We use EPA-approved treatments, satellite-measured estimates, and straightforward pricing. No upsells. No surprises.</p>
+      <div class="about-signature">— Josh &amp; Kayla, Owners</div>
+    </div>
+
   </div>
 </section>
 
-<!-- HERO BANNER (now below the top section) -->
-<section class="hero-banner">
-  <div class="container">
-    <h2>Reputable Roof Soft Wash &amp; Gutter Cleaning In Camas, WA</h2>
-    <p>Safe roof cleaning and protection for a longer-lasting roof. Licensed, bonded, and insured — serving Washington &amp; Oregon since 2025.</p>
-    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:8px">
-      <a href="#quote" class="btn btn-purple btn-lg">Get A Free Quote</a>
-      <a href="tel:3608440794" class="btn btn-ghost btn-lg">📞 (360) 844-0794</a>
+<!-- ============ TRUST BANNER STRIP ============ -->
+<div class="trust-banner">
+  <div class="trust-banner-inner">
+    <span class="trust-banner-item"><span class="dot"></span> Licensed, Bonded and Insured</span>
+    <span class="trust-banner-item"><span class="dot"></span> EPA Approved</span>
+    <span class="trust-banner-item"><span class="dot"></span> Safety First</span>
+    <span class="trust-banner-item"><span class="dot"></span> Serving Since 2025</span>
+  </div>
+</div>
+
+<!-- ============ QUOTE (LEFT) + REVIEWS (RIGHT) ============ -->
+<section class="quote-review-row">
+  <div class="container qr-grid">
+
+    <!-- Quote Box -->
+    <div class="quote-card" id="quote">
+      <h2>Get A Free Quote</h2>
+      <p class="sub">It only takes 60 seconds.</p>
+      <form onsubmit="event.preventDefault();alert('Thanks! We\'ll be in touch within 1 business day.')">
+        <input type="text" placeholder="Full Name" required>
+        <input type="tel" placeholder="Phone" required>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Full Street Address" required>
+        <select required>
+          <option value="">Project Type — Select options…</option>
+          <option>Roof Soft Wash &amp; Moss Removal</option>
+          <option>1st Story Gutter Cleaning</option>
+          <option>2nd Story &amp; Over Gutter Cleaning</option>
+          <option>House Softwash (Siding)</option>
+          <option>Driveway &amp; Entry Cleaning</option>
+          <option>Cedar Fence Softwash</option>
+          <option>Deck / Porch Softwash</option>
+          <option>Retaining Walls</option>
+        </select>
+        <input type="text" placeholder="Project Description">
+        <label class="consent">
+          <input type="checkbox">
+          <span>I consent to receive transactional text messages from MyCleanHomie regarding my service request, including estimate follow-ups, appointment reminders, crew arrival updates, and invoice notifications. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out or HELP for help.</span>
+        </label>
+        <label class="consent">
+          <input type="checkbox">
+          <span>I consent to receive occasional marketing or promotional text messages from MyCleanHomie such as seasonal offers and new service updates. Msg &amp; data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase.</span>
+        </label>
+        <button type="submit" class="btn-submit">Submit</button>
+      </form>
     </div>
+
+    <!-- Reviews Panel -->
+    <div class="reviews-panel">
+      <span class="eyebrow">Reviews</span>
+      <h2>What Your Neighbors Are Saying</h2>
+      <div class="rating-summary">
+        <span class="big-num">4.9</span>
+        <div>
+          <div class="stars">★★★★★</div>
+          <div class="count">Based on 400+ reviews</div>
+        </div>
+      </div>
+
+      <div class="review-item">
+        <div class="review-avatar">SC</div>
+        <div class="review-content">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">"Extremely satisfied! The team was highly professional and easy to work with from the initial quote to the final touches."</div>
+          <div class="review-meta"><span class="name">Stella Chen</span><span class="loc">Camas, WA</span></div>
+        </div>
+      </div>
+      <div class="review-item">
+        <div class="review-avatar">SA</div>
+        <div class="review-content">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">"Great experience from start to finish. Quote was quick, they listened to what I wanted, and had it back within a week."</div>
+          <div class="review-meta"><span class="name">Sara Ashback</span><span class="loc">Vancouver, WA</span></div>
+        </div>
+      </div>
+      <div class="review-item">
+        <div class="review-avatar">BW</div>
+        <div class="review-content">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">"Five star service! Our home looks so much better now than before. The work they do is BEAUTIFUL."</div>
+          <div class="review-meta"><span class="name">Bev Wylie</span><span class="loc">Portland, OR</span></div>
+        </div>
+      </div>
+      <div class="review-item">
+        <div class="review-avatar">MR</div>
+        <div class="review-content">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">"On time, clean, and professional. Left the driveway looking brand new — couldn't be happier."</div>
+          <div class="review-meta"><span class="name">Mike R.</span><span class="loc">Washougal, WA</span></div>
+        </div>
+      </div>
+
+      <div class="reviews-footer">
+        <a href="https://share.google/qzJfJp1kEehNLbCAw" target="_blank" class="btn btn-blue">⭐ Read All Reviews</a>
+        <a href="#quote" class="btn btn-ghost-dark">Get A Free Quote</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -397,13 +423,11 @@ footer .container{position:relative;z-index:1}
       <h2 style="margin-top:10px">Browse Our Past Projects For Cleaning Inspiration</h2>
       <p>We've completed countless beautiful exterior cleaning projects for homeowners and commercial property owners over the years.</p>
     </div>
-    <div class="gal-wrap">
-      <div class="gal-grid">
-        <div class="gal-item"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt=""></div>
-        <div class="gal-item"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80" alt=""></div>
-        <div class="gal-item"><img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80" alt=""></div>
-        <div class="gal-item"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80" alt=""></div>
-      </div>
+    <div class="gal-grid">
+      <div class="gal-item"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt=""></div>
+      <div class="gal-item"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80" alt=""></div>
+      <div class="gal-item"><img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80" alt=""></div>
+      <div class="gal-item"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80" alt=""></div>
     </div>
   </div>
 </section>
